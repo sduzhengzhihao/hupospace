@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Masonry.h"
 #import "AFNetworking.h"
+#import "YYText.h"
 
 @interface ViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UILabel *label;
@@ -20,6 +21,9 @@
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property(nonatomic,weak)NSTimer *timer;
 @property(nonatomic,strong)NSDictionary *bigDic;
+@property (nonatomic, strong) YYTextLayout *layout;
+@property (nonatomic, assign) CGFloat cellHeight;
+@property (nonatomic, assign) CGRect tableRect;
 @end
 
 @implementation ViewController
@@ -104,10 +108,6 @@
     
     
     
-    //表视图
-//    UITableView *tableView=[[UITableView alloc]initWithStyle:UITableViewSytleGrouped];
-//    _tableView.frame=CGRectMake(0,500, 414, 1500);
-//   self.tableView.tableFooterView= view1 ;
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64,414,self.view.bounds.size.height) style:UITableViewStyleGrouped];
     self.tableView.dataSource=self;
     self.tableView.rowHeight=300;
@@ -123,10 +123,6 @@
     [self.view addSubview:navigationBar];
     UINavigationItem *navigationItem =[[UINavigationItem alloc]initWithTitle:@"琥珀博客"];
     navigationBar.items=@[navigationItem];
-
-    
-    
-    
 }
 
 //下一页
@@ -183,18 +179,34 @@
 {
     return 1;
 }
+
 //告诉tableView每一行显示的内容
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
-    UITableViewCell *cell =[[UITableViewCell alloc]init];
-    cell.textLabel.text=@"通用";
+
+    UITableViewCell *cell =[[UITableViewCell alloc]initWithFrame:CGRectZero];
     NSArray *data = [_bigDic objectForKey:@"data"];
-    NSDictionary *firstDict = data[data.count-indexPath.section-1];
-    NSString *content = [firstDict objectForKey:@"post_content"];
- //   NSLog(@"%@",[data objectAtIndex:indexPath.section]);
+    NSDictionary *Dict = data[data.count-indexPath.section-1];
+    NSString *content = [Dict objectForKey:@"post_content"];
     cell.textLabel.text=content;
     cell.textLabel.numberOfLines=0;  //可多行显示
     cell.textLabel.lineBreakMode=NSLineBreakByWordWrapping;//拆行
     return cell;
 }
+
+#pragma mark -代理方法
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"TEST ++你好");
+    return (tableView.rowHeight)<100?tableView.rowHeight:100;
+}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+//{
+//    CommentViewController * commentVc = [[CommentViewController alloc]init];
+//    commentVc.topic = self.topics[indexPath.row];
+//    [self.navigationController pushViewController:commentVc animated:YES];
+//}
+
 @end
+
+

@@ -15,20 +15,24 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking (= 4.0.1)
   - Masonry (= 1.1.0)
+  - YYText (= 1.0.7)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - Masonry
+    - YYText
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: fd008c94c4e5988cfd543d9c4fd3db53822d33ce
+PODFILE CHECKSUM: 9345f3bcd30a93fcb5c0f11b0c750e64008f2c7c
 
-COCOAPODS: 1.9.2
+COCOAPODS: 1.9.3
