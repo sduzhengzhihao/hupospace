@@ -56,9 +56,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2B164FD4251B2699008B4F0E /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		2B2A09B224878B4E0033054B = {
 			isa = PBXGroup;
 			children = (
+				2B164FD4251B2699008B4F0E /* MainView */,
 				2B2A09BD24878B4E0033054B /* myblog */,
 				2B2A09BC24878B4E0033054B /* Products */,
 				05ACC52D45F321767EE43B88 /* Pods */,
@@ -359,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SA896JFK9P;
 				INFOPLIST_FILE = myblog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SA896JFK9P;
 				INFOPLIST_FILE = myblog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -5,6 +5,5 @@ target 'myblog' do
   pod 'Masonry','1.1.0'
   pod 'AFNetworking','4.0.1'
   pod 'YYText', "1.0.7"
-  pod 'BlogMainView', :git => "git@github.com:sduzhengzhihao/BlogMainView.git", :branch => 'develop'
- #pod 'BDSUtils', :git => 'git@code.byted.org:ep/BDSUtils.git', :branch => 'feature/EP_Vote'
+  #pod 'BlogMainView', :git => "git@github.com:sduzhengzhihao/BlogMainView.git", :branch => 'develop'
 end
