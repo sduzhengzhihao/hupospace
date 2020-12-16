@@ -1,9 +1,0 @@
-platform :ios, '9.0'
-source 'https://github.com/CocoaPods/Specs.git'
-target 'myblog' do
-  use_frameworks!
-  pod 'Masonry','1.1.0'
-  pod 'AFNetworking','4.0.1'
-  pod 'YYText', "1.0.7"
-  #pod 'BlogMainView', :git => "git@github.com:sduzhengzhihao/BlogMainView.git", :branch => 'develop'
-end

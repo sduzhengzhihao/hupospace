@@ -1,0 +1,8 @@
+platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+target 'hupospaceSwift' do
+  use_frameworks!
+  pod 'Alamofire'
+  pod 'YYText', "1.0.7"
+  pod 'SnapKit'
+end
